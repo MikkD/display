@@ -1,0 +1,18 @@
+@import '../../../styles/_breakpoints.scss';
+
+.hidden-hamburger-menu{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: none;
+    @include media('<=phone'){
+        display: flex;
+    }
+    
+
+}
+
+

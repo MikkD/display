@@ -1,0 +1,35 @@
+@import '../../../styles/breakpoints';
+
+.body-about-me{
+    display: flex;
+    justify-content: space-between;
+    @include media('<=tablet'){
+        flex-direction: column;
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        font-size: 40px;
+    }
+.about-me-left-block{
+    width: 50%;
+    @include media('<=tablet'){
+        width: 100%;
+    }
+}
+.about-me-right-block{
+    width: 45%;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    @include media('<=tablet'){
+        width: 100%;
+    }
+    img{
+        width: 250px;
+        height: 250px;
+    }
+
+}
+
+}

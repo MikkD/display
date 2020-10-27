@@ -1,0 +1,52 @@
+@import '../../../styles/breakpoints';
+
+.work-exp{
+
+    // min-height: 700px;
+    min-height: 50vh;
+    border:1px solid goldenrod;
+    
+
+.tab-wrapper{
+    display: flex;
+    justify-content: space-between;
+        button{
+            border: none;
+            border: 1px solid red;
+            padding: 10px;
+            background-color: transparent;
+            cursor: pointer;
+            outline: 1px solid transparent;
+            font-size: 26px;
+            width: 140px;
+            @include media('<=desktop'){
+                font-size: 24px;
+            }
+            @include media('<=tablet'){
+                font-size: 20px;
+            }
+            @include media('<=phone'){
+                font-size: 16px;
+            }
+        }
+    .tab-panels{
+        width: 75%;
+        .tab-panel-list{
+            ul{
+                font-size: 24px;
+                @include media('<=desktop'){
+                    font-size: 22px;
+                }
+                @include media('<=tablet'){
+                    font-size: 20px;
+                }
+                @include media('<=phone'){
+                    font-size: 16px;
+                }
+
+        }
+    }
+    }
+}
+
+}

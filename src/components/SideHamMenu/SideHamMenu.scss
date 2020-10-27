@@ -1,0 +1,41 @@
+@import '../../styles/breakpoints.scss';
+
+
+.side-ham-menu{
+    display: none;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s;
+    transform: translateX(100%);
+
+    h2>a{
+        font-size: 50px;
+    }
+    .ham-footer{
+        width: 100%;
+        font-size: 36px;
+    ul{
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        width: 100%;
+        li{margin: 0 25px;}
+        
+    }
+}
+};
+
+
+.active-side-menu{
+    transform: translateX(0%);
+}

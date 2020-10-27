@@ -1,0 +1,63 @@
+@import '../../styles/breakpoints.scss';
+
+
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    border: 1px solid red;
+    padding: 10px 50px;
+    justify-content: space-between;
+    font-size: 1.8em;
+    z-index: 2;
+    @include media('<=desktop'){
+        font-size: 1.6em;
+        padding: 10px 40px;
+    }
+    @include media('<=tablet'){
+        font-size: 1.3em;
+        padding: 10px 20px;
+    }
+    @include media('<=phone'){
+        font-size: 1em;
+        padding: 5px 10px;
+    }
+    .header-icon{
+        border: 1px solid red;
+        display: inline-flex;
+        align-self: center;
+        a{
+            cursor: pointer;
+        }
+        img{
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+    }
+    
+    .header-list{
+        display: flex;
+        border: 1px solid red;
+        @include media('<=phone'){
+            display: none;
+        }
+        li{ 
+            margin: 0px 5px;
+            a{
+                cursor: pointer;
+                padding: 10px;
+                border: 1px solid green;
+                border-bottom: 1px solid gold;
+            }
+        }
+    }
+
+    
+
+
+}
