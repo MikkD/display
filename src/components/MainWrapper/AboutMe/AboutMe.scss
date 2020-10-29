@@ -6,10 +6,16 @@
     @include media('<=tablet'){
         flex-direction: column;
     }
+    svg{
+        font-size: 40px;
+      }
     ul{
         display: flex;
         justify-content: space-between;
         font-size: 40px;
+        width: 300px;
+        display: inline-flex;
+        
     }
 .about-me-left-block{
     width: 50%;

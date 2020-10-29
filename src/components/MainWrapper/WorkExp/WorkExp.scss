@@ -17,28 +17,28 @@
             background-color: transparent;
             cursor: pointer;
             outline: 1px solid transparent;
-            font-size: 26px;
+            font-size: 18px;
             width: 140px;
             @include media('<=desktop'){
-                font-size: 24px;
+                font-size: 18px;
             }
             @include media('<=tablet'){
-                font-size: 20px;
+                font-size: 16px;
             }
             @include media('<=phone'){
-                font-size: 16px;
+                font-size: 14px;
             }
         }
     .tab-panels{
         width: 75%;
         .tab-panel-list{
             ul{
-                font-size: 24px;
+                font-size: 22px;
                 @include media('<=desktop'){
-                    font-size: 22px;
+                    font-size: 20px;
                 }
                 @include media('<=tablet'){
-                    font-size: 20px;
+                    font-size: 18px;
                 }
                 @include media('<=phone'){
                     font-size: 16px;

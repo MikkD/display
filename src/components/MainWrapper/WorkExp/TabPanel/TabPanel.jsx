@@ -1,11 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { workExpData } from '../utils';
+
+const getSelectedTab = (tabsInfo) => tabsInfo.find(el => el.isClicked);
 
 const TabPanel = () => {
     const [tabsInfo, setTabsInfo] = useState(workExpData);
+    const [clickedTab, setClickedTab] = useState(getSelectedTab(tabsInfo))
+
+
+    useEffect(() => {
+        const clicked = getSelectedTab(tabsInfo)
+        setClickedTab(clicked)
+    }, [tabsInfo])
 
     const hanldeTabClick = id => setTabsInfo(prevS =>
         prevS.map(el => el.id !== id ? { ...el, isClicked: false } : { ...el, isClicked: true }))
+
 
     return (
         <React.Fragment>
@@ -19,7 +29,7 @@ const TabPanel = () => {
                 </div>
                 <div className="tab-panels">
                     <div className="tab-panel">
-                        {tabsInfo.map(el => el.isClicked && <TabContent el={el} />)}
+                        {clickedTab && <TabContent clickedTab={clickedTab} />}
                     </div>
                 </div>
             </div>
@@ -31,16 +41,17 @@ const TabPanel = () => {
 export default TabPanel;
 
 
-const TabContent = ({ el }) => {
+const TabContent = ({ clickedTab: { company, date, keyPoints, id } }) => {
     return (
-        <React.Fragment key={el.id}>
+        <React.Fragment key={id}>
             <div className="tab-panel-heading">
-                <h5>{el.company}</h5>
-                <span>{el.date}</span>
+                <h5>{company}</h5>
+                <span>{date}</span>
             </div>
             <div className="tab-panel-list">
                 <ul>
-                    {el.keyPoints.map((el, index) => <li key={index}>{el}</li>)}
+                    {keyPoints.map((el, index) => <li key={index}>{el}</li>)}
+                    <li></li>
                 </ul>
             </div>
         </React.Fragment>

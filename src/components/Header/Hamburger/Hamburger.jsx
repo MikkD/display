@@ -3,7 +3,7 @@ import './Hamburger.scss';
 import styled from 'styled-components';
 
 
-function Hamburger({ isClicked, clickHandler }) {
+function Hamburger({ isClicked, setIsClicked }) {
     const TopHum = styled.div`
 margin-bottom: 0.4rem;
 width: 25px;
@@ -25,7 +25,7 @@ transform: ${isClicked ? 'rotate(45deg) translate(-5px)' : null};
 
     return (
         <React.Fragment>
-            <div onClick={() => clickHandler(prevState => !prevState)}
+            <div onClick={() => setIsClicked(prevState => !prevState)}
                 className={!isClicked ? "ham hidden-hamburger-menu" : " ham hidden-hamburger-menu active"}>
                 <TopHum ></TopHum>
                 <BottomHum ></BottomHum>

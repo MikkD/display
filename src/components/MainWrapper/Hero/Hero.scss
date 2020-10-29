@@ -3,14 +3,15 @@
 
 
 .hero{
-    min-height: 90vh; //! ?? как повлияет на след секцию?
+    min-height: 90vh; 
     border: 1px solid brown;
     margin: 0 auto;
    p{
        padding: 25px 0px;
-       font-size:clamp(20px,2.4vw,4vw);
+       font-size:clamp(20px,1.4vw,24px);
        width: 70%;
        line-height: 1.2;
+       width: 50%;
    }
 }
 

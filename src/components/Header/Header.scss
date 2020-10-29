@@ -1,8 +1,15 @@
 @import '../../styles/breakpoints.scss';
 
+.header-wrapper-helper{
+    overflow: hidden;
+    height: 100vh;
+    width: 1000px;
+    border:2px solid yellowgreen;
+    position: relative;
+}
 
 .header{
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0px;
     left: 0px;
